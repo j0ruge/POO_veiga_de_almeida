@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package evaluationaverage;
 
+import com.sun.jmx.snmp.internal.SnmpSubSystem;
 import java.util.Scanner;
+
 public class EntradaDados {
    public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
@@ -23,9 +19,11 @@ public class EntradaDados {
        nota2=(Double.parseDouble(sc.nextLine()));
        System.out.println("Entre com a Idade  .........: ");
        idade=(Integer.parseInt(sc.nextLine()));
-       System.out.println("Matrícula:  " + matricula);
-       System.out.println("Nome:  " + nome + " Nota 1: " + nota1);
-       System.out.println("Nota 2: " + nota2 + " Idade : " + idade);
+       System.out.println("\n=========================================");
+       System.out.println("\nMatrícula:  " + matricula);
+       System.out.println("Nome:  " + nome + "\nNota 1: " + nota1);
+       System.out.println("\nNota 2: " + nota2 + "\nIdade : " + idade);
        System.out.println("Media: " + (nota1 + nota2 )/2  );
+       System.out.println("\n=========================================");
     }
 }

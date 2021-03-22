@@ -1,36 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package evaluationaverage;
 
 /**
- *
  * @author JorUge
  */
 public class EvaluationAverage {
-   
+
     public static void main(String[] args) {
 
-        double firstEvaluation=0, secondEvaluation=0, thirdEvaluation=0, average=0;    
+        double firstEvaluation = 0, secondEvaluation = 0, thirdEvaluation = 0, average = 0;
 
-        if(firstEvaluation < 5) firstEvaluation=0;
-        if(secondEvaluation < 5) secondEvaluation=0;
-        if(thirdEvaluation < 5) thirdEvaluation=0;
+        if (firstEvaluation < 5) {
+            firstEvaluation = 0;
+        }
+        if (secondEvaluation < 5) {
+            secondEvaluation = 0;
+        }
+        if (thirdEvaluation < 5) {
+            thirdEvaluation = 0;
+        }
 
-        average = ( firstEvaluation + secondEvaluation + thirdEvaluation - Math.min(firstEvaluation, Math.min(secondEvaluation, thirdEvaluation))) / 2;
+        average = (firstEvaluation + secondEvaluation + thirdEvaluation - Math.min(firstEvaluation, Math.min(secondEvaluation, thirdEvaluation))) / 2;
         System.out.printf("%.2f\n", average);
     }
-        
-       
+
 }
-
-
-
-
-
 
 //public class JavaApplication1 {
 //
