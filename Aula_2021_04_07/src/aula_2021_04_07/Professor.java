@@ -14,6 +14,13 @@ public class Professor extends Pessoa {
     String titulacao;
     double salario;
     
+    public Professor(){};
+    public Professor(String nome, String cpf){
+        super(cpf, nome);
+        //setNome(nome);
+        //setCpf(cpf);
+    }
+    
     
     public void setSalario( double salario ) {
         this.salario = salario;

@@ -12,6 +12,13 @@ package aula_2021_04_07;
 public class Pessoa {
 
     String matricula, cpf, nome;
+    
+    
+    public Pessoa() {};
+    public Pessoa(String nome, String cpf ) {
+        setNome(nome);
+        setCpf(cpf);
+    }
 
     public void setMatricula(String matricula) {
         matricula = this.matricula;
@@ -45,7 +52,7 @@ public class Pessoa {
     
     public void imprimir() {
         System.out.println("Matrícula : " + getMatricula());
-        System.out.println("CPF : " + getCpf());
+        System.out.println("CPF       : " + getCpf());
         System.out.println("Nome      : " + getNome());
         
     }
