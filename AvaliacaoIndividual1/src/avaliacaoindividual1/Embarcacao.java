@@ -26,11 +26,135 @@ public class Embarcacao {
     
     // Construtores
 
+    // 1/10 - Construtor vazio.
     public Embarcacao() {
         
     }
     
+    // 2/10 - Atributos do tipo Texto
+    public Embarcacao(String marca, String modelo, String cor, String identificacao){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.identificacao = identificacao;
+    
+    }
+    
+    // 3/10 - Atributos do tipo inteiro
+    public Embarcacao(int numeroPassageiros, int velocidadeMaxima ) {
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+    };
+    
+    
+    // 4/10 - Atrubutos do tipo real
+    public Embarcacao(double preco, double alturaCalado){
+        this.preco = preco;
+        this.alturaCalado = alturaCalado;
+    };
+    
+    // 5/10 - Todos atributos
+    public Embarcacao(
+            String marca, 
+            String modelo, 
+            String cor, 
+            int numeroPassageiros,             
+            double preco,  
+            int velocidadeMaxima, 
+            double alturaCalado,
+            String identificacao ){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.identificacao = identificacao;
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.preco = preco;
+        this.alturaCalado = alturaCalado;
         
+    };
+    
+    
+    // 6/10 - Atributos Físicos/Técnicos 
+    public Embarcacao(
+                        String cor, 
+                        int numeroPassageiros, 
+                        int velocidadeMaxima, 
+                        double alturaCalado ){
+        this.cor = cor;
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.alturaCalado = alturaCalado;
+    
+    };
+    
+    
+    // 7/10 - Atributos administrivos e comerciais 
+    public Embarcacao(
+                    String marca, 
+                    String modelo,     
+                    int numeroPassageiros,
+                    double preco,
+                    int velocidadeMaxima, 
+                    double alturaCalado,
+                    String identificacao
+    ) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.identificacao = identificacao;
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.preco = preco;
+        this.alturaCalado = alturaCalado;
+    }
+    
+    // 8/10 - Atributos comerciais
+    public Embarcacao(
+                    String marca, 
+                    String modelo,     
+                    int numeroPassageiros,
+                    double preco,
+                    int velocidadeMaxima, 
+                    double alturaCalado
+                    
+    ) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.preco = preco;
+        this.alturaCalado = alturaCalado;
+    }
+    
+
+    // 9/10 - Atributos operacionais
+    public Embarcacao(
+            int numeroPassageiros, 
+            int velocidadeMaxima, 
+            double alturaCalado,
+            String identificacao ) {
+        this.numeroPassageiros = numeroPassageiros;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.alturaCalado = alturaCalado;
+        this.identificacao = identificacao;  
+        
+    };  
+    
+    
+    // 10/10 - Atributos numéricos
+    
+    public Embarcacao(
+            int numeroPassageiros, 
+            double preco,
+            int velocidadeMaxima,             
+            double alturaCalado
+    ){
+        this.numeroPassageiros = numeroPassageiros;
+        this.preco = preco;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.alturaCalado = alturaCalado;
+    
+    }
     
     // Métodos de Acesso    
     public String getMarca() {
@@ -104,9 +228,6 @@ public class Embarcacao {
     public double getPorcentagemDesconto() {
         return porcentagemDesconto;
     }
-    
-    
-    
     
     // Métodos extras
     
