@@ -7,6 +7,7 @@ package aula_2021_04_14;
 
 import exercicio_aula_07.ClasseA;
 
+
 /**
  *
  * @author jorge.ferrari
@@ -53,10 +54,15 @@ public class Aula_2021_04_14 {
         a3.quantidade=15;
         
         
+        double meioPIStatic = MinhaClasse.meioPI();
+        
+        ClasseFinal MEIOPIFINAL = new ClasseFinal();
+        
         
         System.out.println("A1 Valor  " + a1.valor + " A1 quantidade " + a1.quantidade + "A1 dolar " + a1.dolar + " Total= " + a1.dolar*a1.quantidade*a1.valor );
         
-        
+        System.out.println("Resultado da Classe Static: " + meioPIStatic);
+        System.err.println("Resultado da Classe Final : " + MEIOPIFINAL.meioPI());
         
         ClasseA teste = new ClasseA("GabirU", 23.4, 34.8);
         
