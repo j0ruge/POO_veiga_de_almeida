@@ -5,11 +5,6 @@
  */
 package avaliacaoindividual1;
 
-import estudo.Cachorro;
-import estudo.Caneta;
-import estudo.Mamifero;
-import estudo.Peixe;
-import estudo.Reptil;
 
 /**
  *
@@ -24,11 +19,17 @@ public class AvaliacaoIndividual1 {
         // TODO code application logic here
         
         
+        Iate i1 = new Iate();
         
         
+        // i1.entrada();
         
         
+        i1.imprimir();
         
+        i1.setPreco(1000.0);
+        
+        System.out.println("Valor Desconto :" + i1.valorDesconto());;
     }
     
 }
