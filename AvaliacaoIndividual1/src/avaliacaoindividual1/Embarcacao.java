@@ -21,6 +21,7 @@ public class Embarcacao {
     private int velocidadeMaxima;
     private double alturaCalado;
     private String identificacao;
+    
     private double porcentagemDesconto;
 
     
@@ -47,7 +48,7 @@ public class Embarcacao {
     };
     
     
-    // 4/10 - Atrubutos do tipo real
+    // 4/10 - Atributos do tipo real
     public Embarcacao(double preco, double alturaCalado){
         this.preco = preco;
         this.alturaCalado = alturaCalado;
@@ -284,6 +285,28 @@ public class Embarcacao {
         
     }  
     
+    public void cadastrar(
+            String marca, 
+            String modelo, 
+            String cor, 
+            int numeroPassageiros,             
+            double preco,  
+            int velocidadeMaxima, 
+            double alturaCalado,
+            String identificacao
+    
+    )    
+    {
+        setMarca(marca);
+        setModelo(modelo);
+        setCor(cor);
+        setNumeroPassageiros(numeroPassageiros);
+        setPreco(preco);
+        setVelocidadeMaxima(velocidadeMaxima);
+        setAlturaCalado(alturaCalado);
+        setIdentificacao(identificacao);
+    
+    };
     
     protected double valorDesconto(){
         this.setPorcentagemDesconto(10.0);

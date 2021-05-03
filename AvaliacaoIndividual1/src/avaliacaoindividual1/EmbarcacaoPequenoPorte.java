@@ -33,7 +33,7 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
     };
     
     
-    // 4/10 - Atrubutos do tipo real 
+    // 4/10 - Atributos do tipo real 
     
     public EmbarcacaoPequenoPorte(double preco, double alturaCalado) {
         super(preco, alturaCalado);
@@ -60,7 +60,7 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
     
     // 6/10 - Atributos Físicos/Técnicos 
     public EmbarcacaoPequenoPorte( 
-            String cor, 
+                        String cor, 
                         int numeroPassageiros, 
                         int velocidadeMaxima, 
                         double alturaCalado,
@@ -151,5 +151,25 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
     public void setTipoCasco(String tipoCasco) {
         this.tipoCasco = tipoCasco;
     };
-
+        
+    
+    // Métodos extras
+    
+    public void cadastrar(
+            String marca, 
+            String modelo, 
+            String cor, 
+            int numeroPassageiros,             
+            double preco,  
+            int velocidadeMaxima, 
+            double alturaCalado,
+            String identificacao,
+            int potenciaMotor,
+            String tipoCasco
+    ){
+        super.cadastrar(marca, modelo, cor, numeroPassageiros, preco, velocidadeMaxima, alturaCalado, identificacao);
+        setPotenciaMotor(potenciaMotor);
+        setTipoCasco(tipoCasco);
+    };
+    
 }
