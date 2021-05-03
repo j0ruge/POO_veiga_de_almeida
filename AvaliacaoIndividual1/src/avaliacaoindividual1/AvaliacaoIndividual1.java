@@ -18,6 +18,9 @@ public class AvaliacaoIndividual1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        EmbarcacaoPequenoPorte g1 = new EmbarcacaoPequenoPorte();
+        
+        
         
         Iate i1 = new Iate();
         
