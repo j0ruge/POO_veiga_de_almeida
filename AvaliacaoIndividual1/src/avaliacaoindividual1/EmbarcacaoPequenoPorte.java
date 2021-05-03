@@ -5,6 +5,8 @@
  */
 package avaliacaoindividual1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author JorUge
@@ -170,6 +172,34 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
         super.cadastrar(marca, modelo, cor, numeroPassageiros, preco, velocidadeMaxima, alturaCalado, identificacao);
         setPotenciaMotor(potenciaMotor);
         setTipoCasco(tipoCasco);
-    };
+    }
+    
+    @Override
+    public void entrada(){
+        
+        Scanner input = new Scanner(System.in);
+        
+        super.entrada();
+        
+        System.out.print("Motor (potência) : ");
+        setPotenciaMotor(Integer.parseInt(input.nextLine()));
+        
+        System.out.print("Casco (tipo)     : ");
+        setTipoCasco(tipoCasco);        
+        
+    }
+    
+    
+    @Override
+    public void imprimir(){
+        
+        super.imprimir();
+        
+        System.out.println("Motor (Potência) : " + getPotenciaMotor() + "HP");
+        System.out.println("Casco (tipo)     : " + getTipoCasco());   
+    }   
+    
+    
+    
     
 }

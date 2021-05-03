@@ -140,10 +140,15 @@ public class Jetski extends EmbarcacaoPequenoPorte {
         return reboque;
     }
 
+    
+        
+    
     @Override
     protected double valorDesconto() {
         this.setPorcentagemDesconto(15.0);
-        return (this.getPorcentagemDesconto() / 100) * this.getPreco();
+        return (this.getPorcentagemDesconto() / 100) * this.getPreco();   
     }
+    
+    
 
 }
