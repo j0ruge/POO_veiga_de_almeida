@@ -117,7 +117,7 @@ public class Jetski extends EmbarcacaoPequenoPorte {
         this.reboque = reboque;
     }
     
-    // // 10/10 - Atributos numéricos
+    // 10/10 - Atributos numéricos
     
     public Jetski(
             int numeroPassageiros, 

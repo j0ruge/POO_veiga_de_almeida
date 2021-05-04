@@ -5,6 +5,8 @@
  */
 package avaliacaoindividual1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author JorUge
@@ -144,8 +146,7 @@ public class Iate extends Embarcacao {
         this.peso = peso;
         this.numeroCabines = numeroCabines;
 
-    }   
-    
+    }
 
     // Métodos de Acesso 
     public int getNumeroTripulantes() {
@@ -179,5 +180,53 @@ public class Iate extends Embarcacao {
     public void setPiscina(boolean piscina) {
         this.piscina = piscina;
     }
+
+    // Métodos extras
+    public void cadastrar(
+            String marca,
+            String modelo,
+            String cor,
+            int numeroPassageiros,
+            double preco,
+            int velocidadeMaxima,
+            double alturaCalado,
+            String identificacao,
+            
+            int numeroTripulantes,
+            double peso,
+            int numeroCabines,
+            boolean piscina
+    ) {
+        super.cadastrar(marca, modelo, cor, numeroPassageiros, preco, velocidadeMaxima, alturaCalado, identificacao);
+        setNumeroTripulantes(numeroTripulantes);
+        setPeso(peso);
+        setNumeroCabines(numeroCabines);
+        setPiscina(piscina);
+
+    }
+    
+    @Override
+    public void entrada(){
+    Scanner input = new Scanner(System.in);
+    
+    super.entrada();
+    
+    
+    System.out.print("Tripulantes (qtd) : ");
+    setNumeroTripulantes(Integer.parseInt(input.nextLine()));
+      
+    System.out.print("Peso              : ");  
+    setPeso(Double.parseDouble(input.nextLine()));
+    
+    System.out.print("Cabines (qtd)     : ");
+    setNumeroCabines(Integer.parseInt(input.nextLine()));
+    
+    System.out.print("Piscina? (true / false)     : ");
+    // Escrever a lógica que troca sim e não, por true e false
+    
+    
+    }
+    
+    
 
 }
