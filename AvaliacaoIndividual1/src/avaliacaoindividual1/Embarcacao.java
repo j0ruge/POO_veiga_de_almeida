@@ -22,7 +22,7 @@ public class Embarcacao {
     private double alturaCalado;
     private String identificacao;
     
-    private double porcentagemDesconto;
+    protected double porcentagemDesconto;
 
     
     // Construtores
@@ -157,6 +157,11 @@ public class Embarcacao {
     
     }
     
+    public Embarcacao(int numeroPassageiros){
+    this.numeroPassageiros = numeroPassageiros;
+    }
+    
+    
     // Métodos de Acesso    
     public String getMarca() {
         return marca;
@@ -222,11 +227,11 @@ public class Embarcacao {
         this.identificacao = identificacao;
     }
 
-    public void setPorcentagemDesconto(double porcentagemDesconto) {
+    protected void setPorcentagemDesconto(double porcentagemDesconto) {
         this.porcentagemDesconto = porcentagemDesconto;
     }    
     
-    public double getPorcentagemDesconto() {
+    protected double getPorcentagemDesconto() {
         return porcentagemDesconto;
     }
     
@@ -308,11 +313,10 @@ public class Embarcacao {
     
     };
     
-    protected double valorDesconto(){
-        this.setPorcentagemDesconto(10.0);
-        return  (this.getPorcentagemDesconto()/100) * this.getPreco();    
+            
+    protected double valorDesconto(double porcentagemDesconto){        
+        this.setPorcentagemDesconto(porcentagemDesconto);    
+        return  (this.getPorcentagemDesconto()/100) * this.getPreco();        
     }
-    
-    
     
 }

@@ -197,9 +197,9 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
         
         System.out.println("Motor (Potência) : " + getPotenciaMotor() + "HP");
         System.out.println("Casco (tipo)     : " + getTipoCasco());   
-    }   
+    }      
     
     
-    
+   
     
 }

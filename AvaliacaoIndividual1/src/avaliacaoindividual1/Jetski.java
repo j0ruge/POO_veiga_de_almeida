@@ -141,7 +141,17 @@ public class Jetski extends EmbarcacaoPequenoPorte {
     }
 
     
+    
+   /* 
+    protected double valorDesconto(double valorDesconto){
         
+    this.setPorcentagemDesconto(valorDesconto);
+    
+    return  (this.getPorcentagemDesconto()/100) * this.getPreco();
+        
+    }
+    
+/**    
     
     @Override
     protected double valorDesconto() {
@@ -149,6 +159,6 @@ public class Jetski extends EmbarcacaoPequenoPorte {
         return (this.getPorcentagemDesconto() / 100) * this.getPreco();   
     }
     
-    
+    */
 
 }

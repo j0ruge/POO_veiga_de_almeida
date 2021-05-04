@@ -148,6 +148,12 @@ public class Iate extends Embarcacao {
 
     }
 
+    // Contrutor para facilitar o pessoasPorCabine()
+    public Iate(int numeroCabines, int numeroPassageiros) {
+        super(numeroPassageiros);
+        this.numeroCabines = numeroCabines;
+    }
+
     // Métodos de Acesso 
     public int getNumeroTripulantes() {
         return numeroTripulantes;
@@ -182,6 +188,43 @@ public class Iate extends Embarcacao {
     }
 
     // Métodos extras
+    @Override
+    public void entrada() {
+        Scanner input = new Scanner(System.in);
+
+        super.entrada();
+
+        System.out.print("Tripulantes (qtd) : ");
+        setNumeroTripulantes(Integer.parseInt(input.nextLine()));
+
+        System.out.print("Peso              : ");
+        setPeso(Double.parseDouble(input.nextLine()));
+
+        System.out.print("Cabines (qtd)     : ");
+        setNumeroCabines(Integer.parseInt(input.nextLine()));
+
+        System.out.print("Piscina? ( sim / não )     : ");
+
+        String piscinaString = input.nextLine();
+
+        if (piscinaString.equals("sim")) {
+            setPiscina(true);
+        } else {
+            setPiscina(false);
+        }
+
+    }
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+
+        System.out.println("Tripulantes      : " + getNumeroTripulantes());
+        System.out.println("Peso             : " + getPeso() + "kg");
+        System.out.println("Cabines          : " + getNumeroCabines());
+        System.out.println("Piscina          : " + isPiscina());
+    }
+
     public void cadastrar(
             String marca,
             String modelo,
@@ -191,7 +234,6 @@ public class Iate extends Embarcacao {
             int velocidadeMaxima,
             double alturaCalado,
             String identificacao,
-            
             int numeroTripulantes,
             double peso,
             int numeroCabines,
@@ -204,29 +246,24 @@ public class Iate extends Embarcacao {
         setPiscina(piscina);
 
     }
-    
-    @Override
-    public void entrada(){
-    Scanner input = new Scanner(System.in);
-    
-    super.entrada();
-    
-    
-    System.out.print("Tripulantes (qtd) : ");
-    setNumeroTripulantes(Integer.parseInt(input.nextLine()));
-      
-    System.out.print("Peso              : ");  
-    setPeso(Double.parseDouble(input.nextLine()));
-    
-    System.out.print("Cabines (qtd)     : ");
-    setNumeroCabines(Integer.parseInt(input.nextLine()));
-    
-    System.out.print("Piscina? (true / false)     : ");
-    // Escrever a lógica que troca sim e não, por true e false
-    
-    
-    }
-    
-    
 
+    protected double valorDesconto() {
+        return super.valorDesconto(10.0);
+    }
+
+    public int pessoasPorCabine() {
+        int pernoiteConfortavel = 2;
+        int coeficienteCabine = 1;
+        
+        // Regra de 3 simples levando em conta 2 pessoas por cabine para um pernoite confortável.
+
+        return ( getNumeroPassageiros() * coeficienteCabine ) / pernoiteConfortavel;
+    }
+
+    public int pessoasPorCabine2() {
+        
+        return ( getNumeroPassageiros() / getNumeroCabines());
+    }    
+    
+    
 }
