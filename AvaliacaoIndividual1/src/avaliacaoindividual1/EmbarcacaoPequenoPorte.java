@@ -185,7 +185,7 @@ public class EmbarcacaoPequenoPorte extends Embarcacao {
         setPotenciaMotor(Integer.parseInt(input.nextLine()));
         
         System.out.print("Casco (tipo)     : ");
-        setTipoCasco(tipoCasco);        
+        setTipoCasco(input.nextLine());        
         
     }
     

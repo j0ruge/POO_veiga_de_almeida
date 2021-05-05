@@ -21,8 +21,8 @@ public class Lancha extends EmbarcacaoPequenoPorte {
     }
 
     // 2/10 - Atributos do tipo Texto
-    public Lancha(String marca, String modelo, String cor, String identificacao) {
-        super(marca, modelo, cor, identificacao, modelo);
+    public Lancha(String marca, String modelo, String cor, String identificacao, String tipoCasco) {
+        super(marca, modelo, cor, identificacao, tipoCasco);
     }
 
     // 3/10 - Atributos do tipo inteiro
