@@ -5,6 +5,9 @@
  */
 package avaliacaoindividual1;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -277,13 +280,14 @@ public class Embarcacao {
     
     public void imprimir(){
         
+               
         System.out.println("");
         System.out.println("::::VALORES CADASTRADOS::::");
         System.out.println("Marca            : " + getMarca());
         System.out.println("Modelo           : " + getModelo());
         System.out.println("Cor              : " + getCor());
         System.out.println("Passageiros      : " + getNumeroPassageiros());
-        System.out.println("Preço            : $" + getPreco());
+        System.out.println("Preço            : R$ " +  String.format(Locale.GERMAN,"%,.2f", getPreco() ));
         System.out.println("Velocidade (max) : " + getVelocidadeMaxima() + " Nós [kn, kt] -> equivalente a " + nosEmQuiloetroHora() + " [km/h]");
         System.out.println("Calado           : " + getAlturaCalado() + " metros");
         System.out.println("Identificação    : " + getIdentificacao());
