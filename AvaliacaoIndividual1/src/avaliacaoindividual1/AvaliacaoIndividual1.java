@@ -37,8 +37,8 @@ public class AvaliacaoIndividual1 {
         Iate i1 = new Iate(6, 2); // ref. Lancha REAL TOP 415
         Iate i2 = new Iate(5, 46, 2, 2); // ref. Portofino Fly 42
         Iate i3 = new Iate("INACE", "82 YACHT", "branca", "POQTY"); // INACE 82 YACHT
-        Iate i4 = new Iate();
-        Iate i5 = new Iate();
+        Iate i4 = new Iate(5, 13, 1.5, "Fernando de Almeida", 3, 2000); // ref. INACE EXPLORA 90 
+        Iate i5 = new Iate(10, 3000000.00, 13, 2, 3, 2900, 5); //INACE EXPLORA 115
         
         
         
@@ -58,6 +58,11 @@ public class AvaliacaoIndividual1 {
         
         System.out.println("Sugestão de " + i1.pessoasPorCabine() + " pessoas por cabine");
         
+        i2.imprimir();
+        i3.imprimir();
+        i4.imprimir();
+        i5.imprimir();
+        System.out.println("Sugestão de " + i5.pessoasPorCabine() + " pessoas por cabine");
     }
 
 }
