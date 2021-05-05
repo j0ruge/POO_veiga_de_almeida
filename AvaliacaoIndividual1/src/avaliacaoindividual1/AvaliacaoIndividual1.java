@@ -5,6 +5,8 @@
  */
 package avaliacaoindividual1;
 
+import java.util.Locale;
+
 /**
  *
  * @author JorUge
@@ -15,7 +17,7 @@ public class AvaliacaoIndividual1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Lachas
+        // Lanchas
         
         Lancha l1 = new Lancha(130000.00, 0.49); // ref. Lancha Fishing 265cc
         Lancha l2 = new Lancha(10, 36, 240); // ref. Focker 265 
@@ -39,7 +41,11 @@ public class AvaliacaoIndividual1 {
         Iate i3 = new Iate("INACE", "82 YACHT", "branca", "POQTY"); // INACE 82 YACHT
         Iate i4 = new Iate(5, 13, 1.5, "Fernando de Almeida", 3, 2000); // ref. INACE EXPLORA 90 
         Iate i5 = new Iate(10, 3000000.00, 13, 2, 3, 2900, 5); //INACE EXPLORA 115
+        Iate i6 = new Iate();
         
+        
+        
+        i6.cadastrar("Lurssen", "Custom", "branca", 36, 600000000.00, 34, 4.5, "M/Y Azzam", 20, 13136, 18, true); // re. M/Y Azzam
         
         
         l1.imprimir();
@@ -63,6 +69,18 @@ public class AvaliacaoIndividual1 {
         i4.imprimir();
         i5.imprimir();
         System.out.println("Sugestão de " + i5.pessoasPorCabine() + " pessoas por cabine");
+        
+        i6.imprimir();
+        
+        System.out.println("");
+        System.out.println("::::INFORMAÇÕES ADICIONAIS::::");
+        System.out.println("Sugestão de " + i6.pessoasPorCabine() + " pessoas por cabine.");
+        
+        System.out.println("Valor máximo de desconto permitido: " +                
+                String.format(Locale.GERMAN,"%,.2f", i6.valorDesconto() )
+        );
+                
+                
     }
 
 }
