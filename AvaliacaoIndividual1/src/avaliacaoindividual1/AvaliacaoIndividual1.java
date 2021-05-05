@@ -106,7 +106,11 @@ public class AvaliacaoIndividual1 {
                 String.format(Locale.GERMAN,"%,.2f", i6.valorDesconto() )
         );
                 
-                
+        Iate i7 = new Iate(10, 4);
+        
+        System.out.println("Pessoas por cabine: " + i7.pessoasPorCabine() );       
+
+        
     }
 
 }

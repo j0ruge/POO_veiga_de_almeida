@@ -249,10 +249,13 @@ public class Iate extends Embarcacao {
     }
 
     protected double valorDesconto() {
+          
         return super.valorDesconto(10.0);
-    }
-
+    }    
     
+    
+    
+    /*
     public int pessoasPorCabine() {
         
         double resultado = ( Double.valueOf( getNumeroPassageiros() ) / Double.valueOf( getNumeroCabines() ));
@@ -260,6 +263,14 @@ public class Iate extends Embarcacao {
         
         return (int) Math.round(resultado);
     }    
+    */
     
+    public double pessoasPorCabine(){
+    
+     double resultado = (double) getNumeroPassageiros()  / getNumeroCabines() ;
+                
+        
+        return resultado;
+    }
     
 }

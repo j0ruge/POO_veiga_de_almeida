@@ -22,8 +22,6 @@ public class Embarcacao {
     private int velocidadeMaxima;
     private double alturaCalado;
     private String identificacao;
-    
-    protected double porcentagemDesconto;
 
     
     // Construtores
@@ -227,14 +225,7 @@ public class Embarcacao {
     public void setIdentificacao(String identificacao) {
         this.identificacao = identificacao;
     }
-
-    protected void setPorcentagemDesconto(double porcentagemDesconto) {
-        this.porcentagemDesconto = porcentagemDesconto;
-    }    
     
-    protected double getPorcentagemDesconto() {
-        return porcentagemDesconto;
-    }
     
     // Métodos extras
     
@@ -317,8 +308,7 @@ public class Embarcacao {
     
             
     protected double valorDesconto(double porcentagemDesconto){        
-        this.setPorcentagemDesconto(porcentagemDesconto);    
-        return  (this.getPorcentagemDesconto()/100) * this.getPreco();        
+        return  (porcentagemDesconto/100) * this.getPreco();        
     }
     
 }
