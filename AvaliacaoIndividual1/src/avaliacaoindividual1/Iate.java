@@ -149,10 +149,11 @@ public class Iate extends Embarcacao {
     }
 
     // Contrutor para facilitar o pessoasPorCabine()
-    public Iate(int numeroCabines, int numeroPassageiros) {
+    public Iate(int numeroPassageiros, int numeroCabines ) {
         super(numeroPassageiros);
         this.numeroCabines = numeroCabines;
     }
+    
 
     // Métodos de Acesso 
     public int getNumeroTripulantes() {
@@ -251,18 +252,13 @@ public class Iate extends Embarcacao {
         return super.valorDesconto(10.0);
     }
 
+    
     public int pessoasPorCabine() {
-        int pernoiteConfortavel = 2;
-        int coeficienteCabine = 1;
         
-        // Regra de 3 simples levando em conta 2 pessoas por cabine para um pernoite confortável.
-
-        return ( getNumeroPassageiros() * coeficienteCabine ) / pernoiteConfortavel;
-    }
-
-    public int pessoasPorCabine2() {
+        double resultado = ( Double.valueOf( getNumeroPassageiros() ) / Double.valueOf( getNumeroCabines() ));
+                
         
-        return ( getNumeroPassageiros() / getNumeroCabines());
+        return (int) Math.round(resultado);
     }    
     
     

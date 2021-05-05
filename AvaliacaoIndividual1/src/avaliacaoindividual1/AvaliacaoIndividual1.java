@@ -27,7 +27,7 @@ public class AvaliacaoIndividual1 {
         System.out.println(l1.valorDesconto());
         //System.out.println(j1.valorDesconto());
 
-        Iate i1 = new Iate(6, 15);
+        Iate i1 = new Iate(10, 3);
 
         //i1.entrada();
         //i1.imprimir();
@@ -36,7 +36,6 @@ public class AvaliacaoIndividual1 {
         System.out.println("Valor Desconto     : " + i1.valorDesconto());
         System.out.println("Tem Piscina        : " + i1.isPiscina());
         System.out.println("Pessoas por Cabine : " + i1.pessoasPorCabine());
-        System.out.println("Pessoas por Cabine ver2 : " + i1.pessoasPorCabine2());
     }
 
 }
