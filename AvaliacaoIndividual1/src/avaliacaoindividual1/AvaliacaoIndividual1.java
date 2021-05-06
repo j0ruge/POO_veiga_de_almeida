@@ -44,6 +44,7 @@ public class AvaliacaoIndividual1 {
         Iate i4 = new Iate(5, 13, 1.5, "Fernando de Almeida", 3, 2000); // ref. INACE EXPLORA 90 
         Iate i5 = new Iate(10, 3000000.00, 13, 2, 3, 2900, 5); //INACE EXPLORA 115
         Iate i6 = new Iate(); // FM/Y Azzam
+        Iate i8 = new Iate();
         
         l6.cadastrar("FS Yachts", "FS 180", "branca", 7,180000.00 , 39, 0.4, "FS180", 130, "fibra", true); // ref. FS 180 
         
@@ -51,6 +52,7 @@ public class AvaliacaoIndividual1 {
         
         i6.cadastrar("Lurssen", "Custom", "branca", 36, 600000000.00, 34, 4.5, "M/Y Azzam", 20, 13136, 18, true); // re. M/Y Azzam
      
+        i8.entrada();
         
         l1.imprimir();
         l2.imprimir();
@@ -100,16 +102,25 @@ public class AvaliacaoIndividual1 {
         
         System.out.println("");
         System.out.println("::::INFORMAÇÕES ADICIONAIS::::");
-        System.out.println("Sugestão de " + i6.pessoasPorCabine() + " pessoas por cabine.");
+        System.out.println("Pessoas por cabine: " + i6.pessoasPorCabine() );
         
-        System.out.println("Valor máximo de desconto permitido: R$ " +                
-                String.format(Locale.GERMAN,"%,.2f", i6.valorDesconto() )
+        System.out.println(
+                "Valor máximo de desconto permitido: R$ " +  String.format( Locale.GERMAN,"%,.2f", i6.valorDesconto() )
         );
                 
-        Iate i7 = new Iate(10, 4);
-        
-        System.out.println("Pessoas por cabine: " + i7.pessoasPorCabine() );       
+               
 
+         i6.imprimir();
+        
+        System.out.println("");
+        System.out.println("::::INFORMAÇÕES ADICIONAIS::::");
+        System.out.println("Pessoas por cabine: " + i8.pessoasPorCabine() );
+        
+        System.out.println(
+                "Valor máximo de desconto permitido: R$ " +  String.format( Locale.GERMAN,"%,.2f", i8.valorDesconto() )
+        );
+        
+        
         
     }
 

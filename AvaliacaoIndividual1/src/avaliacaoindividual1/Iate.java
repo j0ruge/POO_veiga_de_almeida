@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * class Iate
  */
 package avaliacaoindividual1;
 
@@ -248,22 +246,10 @@ public class Iate extends Embarcacao {
 
     }
 
-    protected double valorDesconto() {
+    public double valorDesconto() {
           
         return super.valorDesconto(10.0);
-    }    
-    
-    
-    
-    /*
-    public int pessoasPorCabine() {
-        
-        double resultado = ( Double.valueOf( getNumeroPassageiros() ) / Double.valueOf( getNumeroCabines() ));
-                
-        
-        return (int) Math.round(resultado);
-    }    
-    */
+    }  
     
     public double pessoasPorCabine(){
     
