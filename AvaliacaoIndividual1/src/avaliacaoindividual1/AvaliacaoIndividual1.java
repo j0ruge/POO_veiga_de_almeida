@@ -52,7 +52,7 @@ public class AvaliacaoIndividual1 {
         
         i6.cadastrar("Lurssen", "Custom", "branca", 36, 600000000.00, 34, 4.5, "M/Y Azzam", 20, 13136, 18, true); // re. M/Y Azzam
      
-        i8.entrada();
+       // i8.entrada();
         
         l1.imprimir();
         l2.imprimir();
