@@ -70,7 +70,15 @@ public class Motor {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+        
+        
+         if (peso <= 0) {
+            throw new IllegalArgumentException("O peso deve ser positivo!");
+        } else {
+            this.peso = peso;
+        }       
+        
+        
     }
 
     public int getRpm() {
@@ -78,7 +86,13 @@ public class Motor {
     }
 
     public void setRpm(int rpm) {
-        this.rpm = rpm;
+        
+         if (rpm <= 0) {
+            throw new IllegalArgumentException("O RPM deve ser positivo!");
+        } else {
+            this.rpm = rpm;
+        }  
+        
     }
 
     public int getVelocidade() {
@@ -86,15 +100,32 @@ public class Motor {
     }
 
     public void setVelocidade(int velocidade) {
-        this.velocidade = velocidade;
+        
+        if (velocidade <= 0) {
+            throw new IllegalArgumentException("O RPM deve ser positivo!");
+        } else {
+            this.velocidade = velocidade;
+        }  
+        
+        
     }
 
     public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(String texto) {
-        this.tipo = texto;
+    public void setTipo(String tipo) {        
+        
+        
+        if (tipo.isEmpty()) {
+
+            throw new IllegalArgumentException("Preechimento obrigatório do tipo!");
+        } else {
+            this.tipo = tipo;
+
+        }     
+        
+        
     }
 
     public double getPreco() {
@@ -102,7 +133,12 @@ public class Motor {
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        
+         if (preco <= 0) {
+            throw new IllegalArgumentException("O preço deve ser positivo!");
+        } else {
+            this.preco = preco;
+        }
     }    
     
     
@@ -118,16 +154,16 @@ public class Motor {
         setRpm(rpm);
         setVelocidade(velocidade);
         setTipo(tipo);
-        setTipo(tipo);        
+        setPreco(preco);        
     };
     
     public void imprimir() {
 
         System.out.println("");
         System.out.println("::::VALORES CADASTRADOS::::");
-        System.out.println("Peso         : " + getPeso());
+        System.out.println("Peso         : " + String.format(Locale.GERMAN, "%,.3f", getPeso()) + " kg");
         System.out.println("RPM          : " + getRpm());
-        System.out.println("Velocidade   : " + getVelocidade());
+        System.out.println("Velocidade   : " + getVelocidade() + " km/h");
         System.out.println("Tipo         : " + getTipo());
         System.out.println("Preço        : R$ " + String.format(Locale.GERMAN, "%,.2f", getPreco()));
 
@@ -168,7 +204,7 @@ public class Motor {
                 
             } catch (NumberFormatException numberFormatException) {
                 
-                System.out.println("Somente números são aceitos!");
+                System.out.println("Dados inválidos, somente números são aceitos!");
                 System.out.println(numberFormatException.getMessage());
 
             } catch (Exception e) {

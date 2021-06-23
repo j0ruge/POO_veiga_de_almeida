@@ -5,8 +5,7 @@
  */
 package avaliacaoindividual2;
 
-import classes.Carro;
-import classes.MeioTransporte;
+import classes.*;
 
 /**
  *
@@ -25,15 +24,23 @@ public class AvaliacaoIndividual2 {
         
         c1.setPreco(25000.32);
         
+        Motor m1 = new Motor();
+        
+        //m1.entradaDados();
+        
+        m1.Cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
+        
         //c2.setPreco(0);
         
-        c2.entradaDados();
+        //c2.entradaDados();
         
         System.out.println(c1.getPreco());
         
         System.out.println(c1.valorDesconto());
         
-        c2.imprimir();
+        m1.imprimir();
+        
+        //c2.imprimir();
     }
     
 }
