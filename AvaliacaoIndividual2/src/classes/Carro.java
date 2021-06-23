@@ -5,6 +5,8 @@
  */
 package classes;
 
+import java.util.Scanner;
+
 /**
  * Carro para Atividade Avaliativa 2
  * User: j0ruge
@@ -76,6 +78,18 @@ public class Carro extends MeioTransporte{
         
         return  this.getPreco() -  desconto;        
     }
+    
+    
+    @Override
+    public void entrada(){
+        Scanner input = new Scanner(System.in);
+        
+        super.entrada();
+        
+        System.out.print("Placa            : ");
+        setModelo(input.nextLine());        
+    
+    };
     
     
 }

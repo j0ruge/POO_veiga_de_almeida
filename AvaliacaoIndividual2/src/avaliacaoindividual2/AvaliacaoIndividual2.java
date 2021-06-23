@@ -21,10 +21,13 @@ public class AvaliacaoIndividual2 {
         // TODO code application logic here
         
         MeioTransporte c1 = new Carro();
+        Carro c2 = new Carro();
         
         c1.setPreco(25000.32);
         
+        //c2.setPreco(0);
         
+        c2.entrada();
         
         System.out.println(c1.getPreco());
         

@@ -6,6 +6,7 @@ package classes;
  * and open the template in the editor.
  */
 import java.util.Scanner;
+import java.util.Locale;
 
 /**
  *
@@ -137,7 +138,14 @@ public abstract class MeioTransporte {
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+                        
+        if (preco <= 0 ) {
+            throw new IllegalArgumentException("O preço deve ser positivo!");
+        } else {
+            this.preco = preco;
+        }
+        
+        
     }
     
     // Métodos extras
@@ -168,6 +176,21 @@ public abstract class MeioTransporte {
         setPreco(Double.parseDouble(input.nextLine()));               
     
     }
+    
+    
+    public void imprimir(){
+        
+               
+        System.out.println("");
+        System.out.println("::::VALORES CADASTRADOS::::");
+        System.out.println("Marca            : " + getMarca());
+        System.out.println("Modelo           : " + getModelo());
+        System.out.println("Cor              : " + getCor());
+        System.out.println("Comprimento      : " +  String.format(Locale.GERMAN,"%,.2f", getComprimento()) + "m" ) ;
+        System.out.println("Largura          : " +  String.format(Locale.GERMAN,"%,.2f", getLargura()) + "m" ) ;
+        System.out.println("Preço            : R$ " +  String.format(Locale.GERMAN,"%,.2f", getPreco() ));       
+        
+    }  
     
     
 }
