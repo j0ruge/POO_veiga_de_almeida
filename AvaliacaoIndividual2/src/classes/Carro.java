@@ -94,11 +94,11 @@ public class Carro extends MeioTransporte {
     }
 
     @Override
-    public void entrada() {
+    public void entradaDados() {
         Scanner input = new Scanner(System.in);
         boolean continua = true;
 
-        super.entrada();
+        super.entradaDados();
 
         do {
 

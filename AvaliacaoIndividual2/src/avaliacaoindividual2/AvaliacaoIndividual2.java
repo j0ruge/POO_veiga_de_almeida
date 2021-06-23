@@ -27,7 +27,7 @@ public class AvaliacaoIndividual2 {
         
         //c2.setPreco(0);
         
-        c2.entrada();
+        c2.entradaDados();
         
         System.out.println(c1.getPreco());
         

@@ -188,7 +188,7 @@ public abstract class MeioTransporte {
     // Métodos extras
     public abstract double valorDesconto();
 
-    protected void entrada() {
+    protected void entradaDados() {
         Scanner input = new Scanner(System.in);
         boolean continua = true;
 
