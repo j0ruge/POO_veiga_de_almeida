@@ -5,6 +5,9 @@
  */
 package avaliacaoindividual2;
 
+import classes.Carro;
+import classes.MeioTransporte;
+
 /**
  *
  * @author JorUge
@@ -16,6 +19,16 @@ public class AvaliacaoIndividual2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        MeioTransporte c1 = new Carro();
+        
+        c1.setPreco(25000.32);
+        
+        
+        
+        System.out.println(c1.getPreco());
+        
+        System.out.println(c1.valorDesconto());
     }
     
 }

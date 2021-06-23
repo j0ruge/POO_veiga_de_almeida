@@ -83,7 +83,7 @@ public abstract class MeioTransporte {
     }
     
 
-    // 8/8 - Atributos operacionais
+    // 8/8 - Atributos comerciais
     protected MeioTransporte(double preco) {
         this.preco = preco;        
         
@@ -92,57 +92,57 @@ public abstract class MeioTransporte {
         
     // Métodos de Acesso  
 
-    protected String getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    protected void setMarca(String marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    protected String getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    protected void setModelo(String modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    protected String getCor() {
+    public String getCor() {
         return cor;
     }
 
-    protected void setCor(String cor) {
+    public void setCor(String cor) {
         this.cor = cor;
     }
 
-    protected double getComprimento() {
+    public double getComprimento() {
         return comprimento;
     }
 
-    protected void setComprimento(double comprimento) {
+    public void setComprimento(double comprimento) {
         this.comprimento = comprimento;
     }
 
-    protected double getLargura() {
+    public double getLargura() {
         return largura;
     }
 
-    protected void setLargura(double largura) {
+    public void setLargura(double largura) {
         this.largura = largura;
     }
 
-    protected double getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    protected void setPreco(double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
     
     // Métodos extras
     
-    protected abstract double valorDesconto();
+    public abstract double valorDesconto();
     
     protected void entrada() {
         System.out.println("");
