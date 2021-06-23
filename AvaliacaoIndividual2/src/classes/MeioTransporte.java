@@ -102,30 +102,57 @@ public abstract class MeioTransporte {
     ;   
     
         
-    // Métodos de Acesso  
+    // Métodos de Acesso      
+   
 
     public String getMarca() {
         return marca;
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+        
+        if (marca.isEmpty()) {
+
+            throw new IllegalArgumentException("Preechimento obrigatório da marca!");
+        } else {
+            this.marca = marca;
+
+        }   
+        
+       
     }
 
     public String getModelo() {
         return modelo;
+        
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+
+        if (modelo.isEmpty()) {
+
+            throw new IllegalArgumentException("Preechimento obrigatório do modelo!");
+        } else {
+            this.modelo = modelo;
+
+        }
+
     }
 
     public String getCor() {
         return cor;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void setCor(String cor) {        
+        
+        if (cor.isEmpty()) {
+
+            throw new IllegalArgumentException("Preechimento obrigatório da cor!");
+        } else {
+            this.cor = cor;
+
+        }
+        
     }
 
     public double getComprimento() {
@@ -162,40 +189,47 @@ public abstract class MeioTransporte {
     public abstract double valorDesconto();
 
     protected void entrada() {
-        System.out.println("");
-        System.out.println("INSIRA OS DADOS SOLICITADOS:");
-        boolean continua = true;
-        
         Scanner input = new Scanner(System.in);
+        boolean continua = true;
 
-        System.out.print("Marca        : ");
-        setMarca(input.nextLine());
-
-        System.out.print("Modelo       : ");
-        setModelo(input.nextLine());
-
-        System.out.print("Cor          : ");
-        setCor(input.nextLine());
-        
         do {
+
             try {
+                System.out.println("");
+                System.out.println("INSIRA OS DADOS SOLICITADOS:");
+
+                System.out.print("Marca        : ");
+                setMarca(input.nextLine());
+
+                System.out.print("Modelo       : ");
+                setModelo(input.nextLine());
+
+                System.out.print("Cor          : ");
+                setCor(input.nextLine());
+
                 System.out.print("Comprimento  : ");
                 setComprimento(Double.parseDouble(input.nextLine()));
+
+                System.out.print("Largura      : ");
+                setLargura(Double.parseDouble(input.nextLine()));
+
+                System.out.print("Preço        : ");
+                setPreco(Double.parseDouble(input.nextLine()));
+
                 continua = false;
 
             } catch (InputMismatchException inputMismatchException) {
                 System.err.printf("\nException: %s\n", inputMismatchException);
-                //Scanner.nextLine(); // descarta entrada para o usuário tentar novamente
                 System.out.println("Deve - se entrar com numeros reais. Tente de novo.\n");
-            } 
-        }while (continua);
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("Somente números são aceitos!");
 
-        System.out.print("Largura      : ");
-        setLargura(Double.parseDouble(input.nextLine()));
+            } catch (Exception e) {
+                System.out.println("Erro de operação, dados invalidados!");
+                System.out.println(e.getMessage());
+            }
 
-        System.out.print("Preço        : ");
-        setPreco(Double.parseDouble(input.nextLine()));
-
+        } while (continua);
     }
 
     public void imprimir() {
