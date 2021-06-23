@@ -86,8 +86,17 @@ public class Carro extends MeioTransporte{
         
         super.entrada();
         
-        System.out.print("Placa            : ");
-        setModelo(input.nextLine());        
+        
+        System.out.print("Placa        : ");
+        setPlaca(input.nextLine());        
+    
+    };
+    
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        
+        System.out.println("Placa         : " + getPlaca());  
     
     };
     

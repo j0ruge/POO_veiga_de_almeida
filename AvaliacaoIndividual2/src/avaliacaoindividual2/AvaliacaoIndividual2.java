@@ -32,6 +32,8 @@ public class AvaliacaoIndividual2 {
         System.out.println(c1.getPreco());
         
         System.out.println(c1.valorDesconto());
+        
+        c2.imprimir();
     }
     
 }
