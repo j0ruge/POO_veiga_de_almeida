@@ -26,20 +26,20 @@ public class AvaliacaoIndividual2 {
         
         Motor m1 = new Motor();
         
-        Carro c3 = new Carro(
-                            "Toyota",
-                            "Corola",
-                            "Prata",
-                            "XPR-9087",
-                            3.10,
-                            2.20,
-                            23456,
-                            234.56,
-                            150,
-                            240,
-                            "Gasolina",
-                            3456
-                       );
+//        Carro c3 = new Carro(
+//                            "Toyota",
+//                            "Corola",
+//                            "Prata",
+//                            "XPR-9087",
+//                            3.10,
+//                            2.20,
+//                            23456,
+//                            234.56,
+//                            150,
+//                            240,
+//                            "Gasolina",
+//                            3456
+//                       );
         
         //m1.entradaDados();
         
@@ -47,7 +47,7 @@ public class AvaliacaoIndividual2 {
         
         //c2.setPreco(0);
         
-        //c2.entradaDados();
+        c2.entradaDados();
         
         System.out.println(c1.getPreco());
         
@@ -55,8 +55,8 @@ public class AvaliacaoIndividual2 {
         
         //m1.imprimir();
         
-        //c2.imprimir();
-        c3.imprimir();
+        c2.imprimir();
+//        c3.imprimir();
     }
     
 }

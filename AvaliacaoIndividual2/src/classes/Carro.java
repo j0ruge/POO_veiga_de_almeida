@@ -21,13 +21,11 @@ public class Carro extends MeioTransporte {
     protected String placa;
     Motor motor; 
     
+    // <editor-fold defaultstate="collapsed" desc=" Construtores ">
 
-    // Construtores
-    // 1/5 - Construtor vazio.
+// 1/5 - Construtor vazio.
     public Carro() {
-    }
-
-    ;
+    }    
     
     // 2/5 - Atributos do tipo Texto
     public Carro(String marca, String modelo, String cor, String placa) {
@@ -35,16 +33,14 @@ public class Carro extends MeioTransporte {
         this.placa = placa;
     }
 
-    ;
+    
     
     // 3/5 - Atributos do tipo real 
     
     public Carro(double comprimento, double largura, double preco) {
         super(comprimento, largura, preco);
     }
-
-    ;
-    
+     
     // 4/5 - Todos atributos
     
     public Carro(
@@ -64,9 +60,7 @@ public class Carro extends MeioTransporte {
         super(marca, modelo, cor, comprimento, largura, preco);
         this.placa = placa;
         motor = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
-    }
-
-    ;
+    }    
     
      // 5/5 - Atributos comerciais
     public Carro(double preco) {
@@ -74,9 +68,10 @@ public class Carro extends MeioTransporte {
 
     }
 
-    ;
-    
-    // Métodos de Acesso  
+    // </editor-fold>
+            
+    // <editor-fold defaultstate="collapsed" desc=" Métodos de Acesso ">
+  
     
     public void setPlaca(String placa) {
 
@@ -93,8 +88,12 @@ public class Carro extends MeioTransporte {
     public String getPlaca() {
         return placa;
     }
+    
 
-    // Métodos extras
+    // </editor-fold>
+        
+    // <editor-fold defaultstate="collapsed" desc=" Métodos extras ">
+
     @Override
     public double valorDesconto() {
 
@@ -105,6 +104,7 @@ public class Carro extends MeioTransporte {
 
     @Override
     public void entradaDados() {
+        motor = new Motor();
         Scanner input = new Scanner(System.in);
         boolean continua = true;
 
@@ -114,21 +114,22 @@ public class Carro extends MeioTransporte {
 
             try {
                 System.out.print("Placa        : ");
-                setPlaca(input.nextLine());
+                setPlaca(input.nextLine());               
 
                 continua = false;
 
-            } catch (Exception e) {
-                System.out.println("Erro de operação, dados invalidados!");
-                System.out.println(e.getMessage());
+            } catch (Exception exception) {
+                System.err.println("Erro de operação, dado da Placa invalidado!");
+                System.out.println("Detalhes do Erro: " + exception.getMessage());
             }
 
         } while (continua);
+        
+       motor.entradaDados();
 
     }
 
-    ;
-    
+        
     @Override
     public void imprimir() {
         super.imprimir();
@@ -137,6 +138,7 @@ public class Carro extends MeioTransporte {
         motor.imprimir();
 
     }
-;
+
+    // </editor-fold>  
 
 }

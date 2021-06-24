@@ -23,14 +23,13 @@ public abstract class MeioTransporte {
     protected double comprimento;
     protected double largura;
     protected double preco;
+    
+    // <editor-fold defaultstate="collapsed" desc=" Construtores ">
 
-    // Construtores
+    
     // 1/8 - Construtor vazio.
     protected MeioTransporte() {
-    }
-
-    ;
-    
+    }    
         
     // 2/8 - Atributos do tipo Texto
     protected MeioTransporte(String marca, String modelo, String cor) {
@@ -47,7 +46,6 @@ public abstract class MeioTransporte {
         this.preco = preco;
     }
 
-    ;
     
     // 4/8 - Todos atributos
     protected MeioTransporte(
@@ -64,18 +62,14 @@ public abstract class MeioTransporte {
         this.largura = largura;
         this.preco = preco;
 
-    }
-
-    ;
+    }   
     
     
     // 5/8 - Atributos Marca e Modelo 
     protected MeioTransporte(String marca, String modelo) {
         this.marca = marca;
         this.modelo = modelo;
-    }
-
-    ;
+    }   
     
     
     // 6/8 - Atributo estético 
@@ -97,15 +91,13 @@ public abstract class MeioTransporte {
     protected MeioTransporte(double preco) {
         this.preco = preco;
 
-    }
+    }      
 
-    ;   
+    // </editor-fold>    
     
-        
-    // Métodos de Acesso      
-   
+    // <editor-fold defaultstate="collapsed" desc=" Métodos de Acesso ">
 
-    public String getMarca() {
+	public String getMarca() {
         return marca;
     }
 
@@ -185,7 +177,10 @@ public abstract class MeioTransporte {
 
     }
 
-    // Métodos extras
+    // </editor-fold>   
+            
+    // <editor-fold defaultstate="collapsed" desc=" Métodos extras ">
+
     public abstract double valorDesconto();
 
     protected void entradaDados() {
@@ -222,10 +217,11 @@ public abstract class MeioTransporte {
                 System.err.printf("\nException: %s\n", inputMismatchException);
                 System.out.println("Deve - se entrar com numeros reais. Tente de novo.\n");
             } catch (NumberFormatException numberFormatException) {
+                System.err.printf("\nException: %s\n", numberFormatException);
                 System.out.println("Somente números são aceitos!");
 
             } catch (Exception e) {
-                System.out.println("Erro de operação, dados invalidados!");
+                System.err.println("Erro de operação, dados invalidados!");
                 System.out.println(e.getMessage());
             }
 
@@ -244,5 +240,8 @@ public abstract class MeioTransporte {
         System.out.println("Preço         : R$ " + String.format(Locale.GERMAN, "%,.2f", getPreco()));
 
     }
+	
 
+    // </editor-fold>    
+    
 }

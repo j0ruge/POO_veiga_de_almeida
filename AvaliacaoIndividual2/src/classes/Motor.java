@@ -174,7 +174,7 @@ public double getPeso() {
         setPreco(preco);
     }
 
-    ;
+    
     
     public void imprimir() {
 
@@ -196,7 +196,7 @@ public double getPeso() {
 
             try {
                 System.out.println("");
-                System.out.println("INSIRA OS DADOS SOLICITADOS:");
+                System.out.println("INSIRA OS DADOS DO MOTOR:");
 
                 System.out.print("Peso (Kg)          : ");
                 setPeso(Double.parseDouble(input.nextLine()));
