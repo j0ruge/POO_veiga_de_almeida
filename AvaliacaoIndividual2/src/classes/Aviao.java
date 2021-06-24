@@ -8,39 +8,41 @@ package classes;
 import java.util.Scanner;
 
 /**
- * Lancha para Atividade Avaliativa 2 User: j0ruge Date: 2020/06/24
+ * Aviao para Atividade Avaliativa 2 User: j0ruge Date: 2020/06/24
  *
  * @author JorUge
  * @link https://github.com/j0ruge/POO_veiga_de_almeida/tree/main/AvaliacaoIndividual2
  */
-public class Lancha extends MeioTransporte {
+public class Aviao extends MeioTransporte {
 
-    protected String nome;
+    protected String identificacao;
     Motor motor1;
     Motor motor2;
+    Motor motor3;
+    Motor motor4;
 
     // <editor-fold defaultstate="collapsed" desc=" Construtores  ">
     // 1/5 - Construtor vazio.
-    public Lancha() {
+    public Aviao() {
     }
 
     // 2/5 - Atributos do tipo Texto
-    public Lancha(String marca, String modelo, String cor, String nome) {
+    public Aviao(String marca, String modelo, String cor, String identificacao) {
         super(marca, modelo, cor);
-        this.nome = nome;
+        this.identificacao = identificacao;
     }
 
     // 3/5 - Atributos do tipo real 
-    public Lancha(double comprimento, double largura, double preco) {
+    public Aviao(double comprimento, double largura, double preco) {
         super(comprimento, largura, preco);
     }
 
     // 4/5 - Todos atributos
-    public Lancha(
+    public Aviao(
             String marca,
             String modelo,
             String cor,
-            String nome,
+            String identificacao,
             double comprimento,
             double largura,
             double preco,
@@ -51,13 +53,13 @@ public class Lancha extends MeioTransporte {
             double motorPreco
     ) {
         super(marca, modelo, cor, comprimento, largura, preco);
-        this.nome = nome;
+        this.identificacao = identificacao;
         motor1 = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
         motor2 = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
     }
 
     // 5/5 - Atributos comerciais
-    public Lancha(double preco) {
+    public Aviao(double preco) {
         super(preco);
 
     }
@@ -65,16 +67,16 @@ public class Lancha extends MeioTransporte {
     // </editor-fold>    
     // <editor-fold defaultstate="collapsed" desc=" Métodos de Acesso  ">
     public String getNome() {
-        return nome;
+        return identificacao;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String identificacao) {
 
-        if (nome.isEmpty()) {
+        if (identificacao.isEmpty()) {
 
             throw new IllegalArgumentException("Preechimento obrigatório de um Nome!");
         } else {
-            this.nome = nome;
+            this.identificacao = identificacao;
 
         }
 
@@ -84,7 +86,7 @@ public class Lancha extends MeioTransporte {
     // <editor-fold defaultstate="collapsed" desc=" Métodos extras  ">
     @Override
     public double valorDesconto() {
-        double desconto = (0.1 * this.getPreco());
+        double desconto = (0.08 * this.getPreco());
 
         return this.getPreco() - desconto;
     }
@@ -93,9 +95,11 @@ public class Lancha extends MeioTransporte {
     public void imprimir() {
         super.imprimir();
 
-        System.out.println("Nome          : " + getNome());
+        System.out.println("Identificação : " + getNome());
         motor1.imprimir();
         motor2.imprimir();
+        motor3.imprimir();
+        motor3.imprimir();
 
     }
 
@@ -103,26 +107,43 @@ public class Lancha extends MeioTransporte {
             String marca,
             String modelo,
             String cor,
-            String nome,
+            String identificacao,
             double comprimento,
             double largura,
             double preco,
+            
             double motor1Peso,
             int motor1RPM,
             int motor1Velocidade,
             String motor1Tipo,
             double motor1Preco,
+            
             double motor2Peso,
             int motor2RPM,
             int motor2Velocidade,
             String motor2Tipo,
-            double motor2Preco
+            double motor2Preco,
+            
+            double motor3Peso,
+            int motor3RPM,
+            int motor3Velocidade,
+            String motor3Tipo,
+            double motor3Preco,
+            
+            double motor4Peso,
+            int motor4RPM,
+            int motor4Velocidade,
+            String motor4Tipo,
+            double motor4Preco
+            
     ) {
 
         super.cadastrar(marca, modelo, cor, comprimento, largura, preco);
-        setNome(nome);
+        setNome(identificacao);
         motor1 = new Motor(motor1Peso, motor1RPM, motor1Velocidade, motor1Tipo, motor1Preco);
         motor2 = new Motor(motor2Peso, motor2RPM, motor2Velocidade, motor2Tipo, motor2Preco);
+        motor3 = new Motor(motor3Peso, motor3RPM, motor3Velocidade, motor3Tipo, motor3Preco);
+        motor2 = new Motor(motor4Peso, motor4RPM, motor4Velocidade, motor4Tipo, motor4Preco);
 
     }
 
@@ -154,6 +175,8 @@ public class Lancha extends MeioTransporte {
         
        motor1.entradaDados();
        motor2.entradaDados();
+       motor3.entradaDados();
+       motor3.entradaDados();
 
     }
     
