@@ -5,7 +5,6 @@
  */
 package classes;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -100,6 +99,27 @@ public class Carro extends MeioTransporte {
         double desconto = (0.15 * this.getPreco());
 
         return this.getPreco() - desconto;
+    }
+    
+    public void cadastrar(
+            String marca,
+            String modelo,
+            String cor,
+            String placa,
+            double comprimento,
+            double largura,
+            double preco,
+            double motorPeso,
+            int motorRPM,
+            int motorVelocidade,
+            String motorTipo,
+            double motorPreco   
+    ){
+            super.cadastrar(marca, modelo, cor, comprimento, largura, preco);
+            setPlaca(placa);
+            
+            motor = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
+    
     }
 
     @Override

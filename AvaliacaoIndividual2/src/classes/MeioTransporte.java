@@ -240,6 +240,23 @@ public abstract class MeioTransporte {
         System.out.println("Preço         : R$ " + String.format(Locale.GERMAN, "%,.2f", getPreco()));
 
     }
+    
+    public void cadastrar(
+                
+            String marca,
+            String modelo,
+            String cor,
+            double comprimento,
+            double largura,
+            double preco
+    ){
+            setMarca(marca);
+            setModelo(modelo);
+            setCor(cor);
+            setComprimento(comprimento);
+            setLargura(largura);
+            setPreco(preco);
+    }
 	
 
     // </editor-fold>    

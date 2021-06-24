@@ -19,18 +19,78 @@ public class Lancha extends MeioTransporte{
      protected String nome;
      Motor motor1;
      Motor motor2;     
-    
+
+       
+        
     
     // <editor-fold defaultstate="collapsed" desc=" Construtores  ">
 
-	
+    // 1/5 - Construtor vazio.
+     
+     public Lancha()  {
+     }
+     
+     // 2/5 - Atributos do tipo Texto
+     
+     public Lancha(String marca, String modelo, String cor, String nome) {
+        super(marca, modelo, cor);
+        this.nome = nome;
+    }
+     
+     // 3/5 - Atributos do tipo real 
+    
+    public Lancha(double comprimento, double largura, double preco) {
+        super(comprimento, largura, preco);        
+    }
+    
+     // 4/5 - Todos atributos
+    
+    public Lancha(
+            String marca,
+            String modelo,
+            String cor,
+            String nome,
+            double comprimento,
+            double largura,
+            double preco,
+            double motorPeso,
+            int motorRPM,
+            int motorVelocidade,
+            String motorTipo,
+            double motorPreco
+    ) {
+        super(marca, modelo, cor, comprimento, largura, preco);
+        this.nome = nome;
+        motor1 = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
+        motor2 = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
+    }    
+
+     // 5/5 - Atributos comerciais
+    public Lancha(double preco) {
+        super(preco);
+
+    }
 
     // </editor-fold>    
     
     
     // <editor-fold defaultstate="collapsed" desc=" Métodos de Acesso  ">
 
-	
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        
+         if (nome.isEmpty()) {
+
+            throw new IllegalArgumentException("Preechimento obrigatório de um Nome!");
+        } else {
+            this.nome = nome;
+
+        }
+        
+    } 
 
     // </editor-fold>     
     
@@ -42,6 +102,17 @@ public class Lancha extends MeioTransporte{
 
         return this.getPreco() - desconto;
     }
+    
+    @Override
+    public void imprimir() {
+        super.imprimir();
+
+        System.out.println("Nome          : " + getNome());
+        motor1.imprimir();
+        motor2.imprimir();
+
+    }
+    
 
     // </editor-fold>    
     

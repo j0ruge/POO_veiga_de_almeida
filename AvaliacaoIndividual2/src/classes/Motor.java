@@ -161,7 +161,7 @@ public double getPeso() {
     
     
     // <editor-fold defaultstate="collapsed" desc=" Métodos extras ">
-    public void Cadastrar(
+    public void cadastrar(
             double peso,
             int rpm,
             int velocidade,

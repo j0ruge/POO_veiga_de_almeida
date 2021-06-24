@@ -26,6 +26,18 @@ public class AvaliacaoIndividual2 {
         
         Motor m1 = new Motor();
         
+        Lancha l1 = new Lancha();
+        
+        m1.Cadastrar(23, 233, 232, "Biflex", 23);
+        
+      
+        
+               
+        l1.getMotor1();
+        
+        System.out.println(l1.getMotor1());
+        //l1.imprimir();
+        
 //        Carro c3 = new Carro(
 //                            "Toyota",
 //                            "Corola",
@@ -43,19 +55,19 @@ public class AvaliacaoIndividual2 {
         
         //m1.entradaDados();
         
-        //m1.Cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
+        //m1.cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
         
         //c2.setPreco(0);
         
-        c2.entradaDados();
+        //c2.entradaDados();
         
-        System.out.println(c1.getPreco());
+        //System.out.println(c1.getPreco());
         
-        System.out.println(c1.valorDesconto());
+        //System.out.println(c1.valorDesconto());
         
         //m1.imprimir();
         
-        c2.imprimir();
+        //c2.imprimir();
 //        c3.imprimir();
     }
     
