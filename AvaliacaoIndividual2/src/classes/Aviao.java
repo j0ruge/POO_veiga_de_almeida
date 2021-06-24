@@ -8,7 +8,9 @@ package classes;
 import java.util.Scanner;
 
 /**
- * Aviao para Atividade Avaliativa 2 User: j0ruge Date: 2020/06/24
+ * Aviao para Atividade Avaliativa 2 
+ * User: j0ruge 
+ * Date: 2020/06/24
  *
  * @author JorUge
  * @link https://github.com/j0ruge/POO_veiga_de_almeida/tree/main/AvaliacaoIndividual2

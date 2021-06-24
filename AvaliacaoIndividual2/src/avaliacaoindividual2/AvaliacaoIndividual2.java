@@ -6,6 +6,7 @@
 package avaliacaoindividual2;
 
 import classes.*;
+import java.util.Locale;
 
 /**
  *
@@ -28,16 +29,40 @@ public class AvaliacaoIndividual2 {
         
         Lancha l1 = new Lancha();
         
-        m1.cadastrar(23, 233, 232, "Biflex", 23);
+        Lancha lancha[] = new Lancha[1];
+        Carro carro[] = new Carro[1];
+        Aviao aviao[] = new Aviao[1];
         
-      
+                
         
-               
-        l1.cadastrar("Toyota", "XPTO", "Branca", "GabirU do Mar", 3.10, 2.20, 23456, 23.300, 150, 234, "Diesel", 3456.34, 23.300, 150, 234, "Diesel", 3456.34);
         
+       for(int i=0; i<lancha.length; i++){
+           
+            System.out.println("");
+            System.out.println("==> INSIRA DADOS PARA LANCHA "+ (i+1) + " <==" );
+            lancha[i] = new Lancha();       
+            lancha[i].entradaDados();
+        }
        
-        l1.imprimir();
-        
+       for(int i=0; i<lancha.length; i++){
+           
+            System.out.println("");
+            System.out.println("==> DADOS REGISTRADOS PARA LANCHA "+ (i+1) + " <==" );
+                  
+            lancha[i].imprimir();
+            
+            System.out.println("");
+            System.out.println("::::INFORMAÇÕES ADICIONAIS::::");
+            
+            System.out.println(
+                "Valor com máximo desconto permitido: R$ " +  String.format( Locale.GERMAN,"%,.2f", lancha[i].valorDesconto() )
+        );
+            
+        }
+       
+        //m1.cadastrar(23, 233, 232, "Biflex", 23);
+        //l1.cadastrar("Toyota", "XPTO", "Branca", "GabirU do Mar", 3.10, 2.20, 23456, 23.300, 150, 234, "Diesel", 3456.34, 23.300, 150, 234, "Diesel", 3456.34);
+        //l1.imprimir();
 //        Carro c3 = new Carro(
 //                            "Toyota",
 //                            "Corola",
@@ -52,21 +77,13 @@ public class AvaliacaoIndividual2 {
 //                            "Gasolina",
 //                            3456
 //                       );
-        
         //m1.entradaDados();
-        
         //m1.cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
-        
         //c2.setPreco(0);
-        
         //c2.entradaDados();
-        
         //System.out.println(c1.getPreco());
-        
         //System.out.println(c1.valorDesconto());
-        
         //m1.imprimir();
-        
         //c2.imprimir();
 //        c3.imprimir();
     }
