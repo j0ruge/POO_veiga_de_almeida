@@ -113,6 +113,35 @@ public class Lancha extends MeioTransporte{
 
     }
     
+   public void cadastrar(    
+            String marca,
+            String modelo,
+            String cor,
+            String nome,
+            double comprimento,
+            double largura,
+            double preco,
+            
+            double motor1Peso,
+            int motor1RPM,
+            int motor1Velocidade,
+            String motor1Tipo,
+            double motor1Preco,
+            
+            double motor2Peso,
+            int motor2RPM,
+            int motor2Velocidade,
+            String motor2Tipo,
+            double motor2Preco    
+    ){
+   
+       super.cadastrar(marca, modelo, cor, comprimento, largura, preco);
+       setNome(nome);
+       motor1 = new Motor(motor1Peso, motor1RPM, motor1Velocidade, motor1Tipo, motor1Preco);
+       motor2 = new Motor(motor2Peso, motor2RPM, motor2Velocidade, motor2Tipo, motor2Preco);
+   
+   }
+    
 
     // </editor-fold>    
     

@@ -178,13 +178,13 @@ public double getPeso() {
     
     public void imprimir() {
 
-        System.out.println("");
-        System.out.println("::::MOTOR::::");
-        System.out.println("Peso         : " + String.format(Locale.GERMAN, "%,.3f", getPeso()) + " kg");
-        System.out.println("RPM          : " + getRpm());
-        System.out.println("Velocidade   : " + getVelocidade() + " km/h");
-        System.out.println("Tipo         : " + getTipo());
-        System.out.println("Preço        : R$ " + String.format(Locale.GERMAN, "%,.2f", getPreco()));
+        System.out.println("");        
+        System.out.println(":::::::::::MOTOR:::::::::::");
+        System.out.println("Peso          : " + String.format(Locale.GERMAN, "%,.3f", getPeso()) + " kg");
+        System.out.println("RPM           : " + getRpm());
+        System.out.println("Velocidade    : " + getVelocidade() + " km/h");
+        System.out.println("Tipo          : " + getTipo());
+        System.out.println("Preço         : R$ " + String.format(Locale.GERMAN, "%,.2f", getPreco()));
 
     }
 

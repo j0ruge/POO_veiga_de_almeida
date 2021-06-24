@@ -28,15 +28,15 @@ public class AvaliacaoIndividual2 {
         
         Lancha l1 = new Lancha();
         
-        m1.Cadastrar(23, 233, 232, "Biflex", 23);
+        m1.cadastrar(23, 233, 232, "Biflex", 23);
         
       
         
                
-        l1.getMotor1();
+        l1.cadastrar("Toyota", "XPTO", "Branca", "GabirU do Mar", 3.10, 2.20, 23456, 23.300, 150, 234, "Diesel", 3456.34, 23.300, 150, 234, "Diesel", 3456.34);
         
-        System.out.println(l1.getMotor1());
-        //l1.imprimir();
+       
+        l1.imprimir();
         
 //        Carro c3 = new Carro(
 //                            "Toyota",
