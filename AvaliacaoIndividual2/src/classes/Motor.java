@@ -160,7 +160,7 @@ public class Motor {
     public void imprimir() {
 
         System.out.println("");
-        System.out.println("::::VALORES CADASTRADOS::::");
+        System.out.println("::::MOTOR::::");
         System.out.println("Peso         : " + String.format(Locale.GERMAN, "%,.3f", getPeso()) + " kg");
         System.out.println("RPM          : " + getRpm());
         System.out.println("Velocidade   : " + getVelocidade() + " km/h");

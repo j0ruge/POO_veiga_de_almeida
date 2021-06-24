@@ -9,7 +9,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Carro para Atividade Avaliativa 2 User: j0ruge Date: 2020/06/22
+ * Carro para Atividade Avaliativa 2 
+ * User: j0ruge 
+ * Date: 2020/06/22
  *
  * @author JorUge
  * @link https://github.com/j0ruge/POO_veiga_de_almeida/tree/main/AvaliacaoIndividual2
@@ -17,6 +19,8 @@ import java.util.Scanner;
 public class Carro extends MeioTransporte {
 
     protected String placa;
+    Motor motor; 
+    
 
     // Construtores
     // 1/5 - Construtor vazio.
@@ -50,10 +54,16 @@ public class Carro extends MeioTransporte {
             String placa,
             double comprimento,
             double largura,
-            double preco
+            double preco,
+            double motorPeso,
+            int motorRPM,
+            int motorVelocidade,
+            String motorTipo,
+            double motorPreco
     ) {
         super(marca, modelo, cor, comprimento, largura, preco);
         this.placa = placa;
+        motor = new Motor(motorPeso, motorRPM, motorVelocidade, motorTipo, motorPreco);
     }
 
     ;
@@ -124,6 +134,7 @@ public class Carro extends MeioTransporte {
         super.imprimir();
 
         System.out.println("Placa         : " + getPlaca());
+        motor.imprimir();
 
     }
 ;

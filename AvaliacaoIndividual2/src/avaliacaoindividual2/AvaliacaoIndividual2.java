@@ -26,9 +26,24 @@ public class AvaliacaoIndividual2 {
         
         Motor m1 = new Motor();
         
+        Carro c3 = new Carro(
+                            "Toyota",
+                            "Corola",
+                            "Prata",
+                            "XPR-9087",
+                            3.10,
+                            2.20,
+                            23456,
+                            234.56,
+                            150,
+                            240,
+                            "Gasolina",
+                            3456
+                       );
+        
         //m1.entradaDados();
         
-        m1.Cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
+        //m1.Cadastrar(23.300, 150, 234, "Gasolina", 3456.34);
         
         //c2.setPreco(0);
         
@@ -38,9 +53,10 @@ public class AvaliacaoIndividual2 {
         
         System.out.println(c1.valorDesconto());
         
-        m1.imprimir();
+        //m1.imprimir();
         
         //c2.imprimir();
+        c3.imprimir();
     }
     
 }
