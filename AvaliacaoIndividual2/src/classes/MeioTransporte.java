@@ -216,13 +216,16 @@ public abstract class MeioTransporte {
             } catch (InputMismatchException inputMismatchException) {
                 System.err.printf("\nException: %s\n", inputMismatchException);
                 System.out.println("Deve - se entrar com numeros reais. Tente de novo.\n");
+                
             } catch (NumberFormatException numberFormatException) {
                 System.err.printf("\nException: %s\n", numberFormatException);
                 System.out.println("Somente números são aceitos!");
+               
 
             } catch (Exception e) {
                 System.err.println("Erro de operação, dados invalidados!");
                 System.out.println(e.getMessage());
+                
             }
 
         } while (continua);

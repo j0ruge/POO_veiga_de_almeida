@@ -24,6 +24,7 @@ public class Carro extends MeioTransporte {
 
 // 1/5 - Construtor vazio.
     public Carro() {
+        motor = new Motor();
     }    
     
     // 2/5 - Atributos do tipo Texto
@@ -74,14 +75,11 @@ public class Carro extends MeioTransporte {
     
     public void setPlaca(String placa) {
 
-        if (placa.isEmpty()) {
-
+        if (!placa.isEmpty()) {
+            this.placa = placa;           
+        } else {            
             throw new IllegalArgumentException("Preechimento obrigatório da Placa!");
-        } else {
-            this.placa = placa;
-
         }
-
     }
 
     public String getPlaca() {

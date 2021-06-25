@@ -21,7 +21,9 @@ public class Lancha extends MeioTransporte {
 
     // <editor-fold defaultstate="collapsed" desc=" Construtores  ">
     // 1/5 - Construtor vazio.
-    public Lancha() {
+    public Lancha( ) {
+        motor1 = new Motor();
+        motor2 = new Motor();
     }
 
     // 2/5 - Atributos do tipo Texto

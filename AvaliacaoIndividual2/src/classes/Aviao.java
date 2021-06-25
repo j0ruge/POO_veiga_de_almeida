@@ -26,6 +26,11 @@ public class Aviao extends MeioTransporte {
     // <editor-fold defaultstate="collapsed" desc=" Construtores  ">
     // 1/5 - Construtor vazio.
     public Aviao() {
+        motor1 = new Motor();
+        motor2 = new Motor();
+        motor3 = new Motor();
+        motor4 = new Motor();
+        
     }
 
     // 2/5 - Atributos do tipo Texto
